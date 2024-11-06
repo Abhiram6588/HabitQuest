@@ -50,7 +50,7 @@ def check_goal_deadlines():
     for goal in due_goals:
         user_id = goal['user_id']
         cursor.execute('''
-            SELECT email, first_name, last_name 
+            SELECT email, name, 
             FROM Users 
             WHERE user_id = ?
         ''', (user_id,))
@@ -59,12 +59,11 @@ def check_goal_deadlines():
         if user:
             # Step 2.2: Get the email from the user details
             email = user['email']
-            first_name = user['first_name']
-            last_name = user['last_name']
+            first_name = user['name']
 
             # Step 2.3: Create the email content
             message_content = f"""
-            Dear {first_name} {last_name},
+            Dear {first_name},
 
             This is a reminder that your goal is due today:
 
