@@ -22,7 +22,7 @@ body {
 
 /* Navbar styling */
 .navbar {
-    background-color: #36a03e; /* Green background */
+    background-color: #1B5E20; /* Green background */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,16 +73,16 @@ h1 {
 }
 
 .courses-enrolled, .courses-completed {
-    width: 45%;
-    padding: 20px;
-    background-color: #f7f7f7;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+            width: 45%;
+            padding: 20px;
+            background-color: #f7f7f7;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
 .courses-enrolled a, .courses-completed a {
-    color: #007bff; /* Blue link color */
+    color: #0056b3; /* Blue link color */
     text-decoration: none;
     font-weight: bold;
 }
@@ -139,7 +139,7 @@ tbody tr:nth-child(even) {
     }
 
     .dropbtn {
-        background-color: #4CAF50; /* Green */
+        background-color: #1B5E20; /* Green */
         color: white;
         padding: 10px;
         font-size: 16px;
@@ -172,7 +172,7 @@ tbody tr:nth-child(even) {
     }
 
     .dropdown:hover .dropbtn {
-        background-color: #3e8e41;
+        background-color: #1B5E20;
     }
 
          /* Search bar */
@@ -212,7 +212,7 @@ tbody tr:nth-child(even) {
             padding: 10px 15px;
             font-size: 1em;
             color: #fff;
-            background-color: #3e8e41; /* Bootstrap primary color */
+            background-color: #1B5E20; /* Bootstrap primary color */
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -221,7 +221,7 @@ tbody tr:nth-child(even) {
         }
     
         button:hover, button:focus {
-            background-color: #3e8e41; /* Darker shade on hover */
+            background-color: #1B5E20; /* Darker shade on hover */
             transform: translateY(-2px); /* Subtle lift effect */
         }
     
@@ -336,7 +336,8 @@ tbody tr:nth-child(even) {
         <div class="habit-tracker">
             <h2>Daily Habit Tracker</h2>
             <div class="search-container">
-                <input type="text" id="searchInput" onkeyup="searchCourses()" placeholder="Search for courses...">
+                <input type="text" id="searchInput" onkeyup="searchCourses()" placeholder="Search for courses..." aria-label="Search for courses">
+
             </div>
             <table>
                 <thead>
