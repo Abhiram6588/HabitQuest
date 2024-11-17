@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Page</title>
+    <title>Create a New Account - HabitQuest</title>
     <style>
         .signup-page {
             background-color: #eae9d8;
@@ -57,9 +57,9 @@
 
         .input-field {
             border-radius: 8px;
-            background-color: #f0e3e3;
+            background-color: #e0e0e0; /* Increased contrast */
             font-size: 13px;
-            color: #757575;
+            color: #333; /* Darker text for better contrast */
             padding: 10px;
             border: 1px solid #ccc;
             width: 100%;
@@ -78,7 +78,7 @@
         }
 
         .btn-signup {
-            background-color: #4caf50;
+            background-color: #1B5E20;
         }
 
         .terms-container {
@@ -135,35 +135,40 @@
     </header>
 
     <main class="signup-form">
-        <h2 class="signup-title">Sign Up</h2>
+        <h2 class="signup-title">Create a New Account</h2>
         
         <div class="separator" role="separator"></div>
         <form method="POST" action="{{ url_for('signup') }}">
-            <label for="name" class="visually-hidden">Name</label>
+            <label for="name">Name</label>
             <input type="text" id="name" class="input-field" name="name" placeholder="Name" required>
 
-            <label for="email" class="visually-hidden">Email</label>
+            <label for="email">Email</label>
             <input type="email" id="email" class="input-field" name="email" placeholder="Email" required>
 
-            <label for="password" class="visually-hidden">Password</label>
+            <label for="password">Password</label>
             <input type="password" id="password" class="input-field" name="password" placeholder="Password" required>
 
-            <label for="phone" class="visually-hidden">Phone Number</label>
+            <label for="phone">Phone Number</label>
             <input type="text" id="phone" class="input-field" name="phone" placeholder="Phone Number" required>
 
-            <label for="role" class="visually-hidden">Role</label>
-            <select id="role" name="role" class="input-field" required onchange="toggleParentDropdown()">
+ <!-- Role Selection with Button -->
+        <div style="display: flex; gap: 10px;">
+            <label for="role-select" class="visually-hidden">Select Role</label> <!-- Associating label with select -->
+            <select id="role-select" name="role" class="input-field">
+                <option value="" disabled selected>Select Role</option> <!-- Default option to indicate the purpose of the select menu -->
                 <option value="Child">Child</option>
                 <option value="Parent">Parent</option>
             </select>
+            <button type="button" id="role-change-btn" class="btn btn-signup">Go</button>
+        </div>
 
             <div id="dob-container" style="display:none;">
-                <label for="dob" class="visually-hidden">Date of Birth</label>
+                <label for="dob">Date of Birth</label>
                 <input type="date" id="dob" class="input-field" name="date_of_birth" placeholder="Date of Birth">
             </div>
 
             <div id="gender-container" style="display:none;">
-                <label for="gender" class="visually-hidden">Gender</label>
+                <label for="gender">Gender</label>
                 <select id="gender" name="gender" class="input-field">
                     <option value="" disabled selected>Select Gender</option>
                     <option value="Male">Male</option>
@@ -173,7 +178,7 @@
             </div>
 
             <div id="parent-dropdown-container" style="display:none;">
-                <label for="parent" class="visually-hidden">Select Parent</label>
+                <label for="parent">Select Parent</label>
                 <select id="parent" name="parent_id" class="input-field">
                     <option value="" disabled selected>Select your parent</option>
                     {% for parent in parents %}
@@ -194,27 +199,28 @@
                 <a href="{{ url_for('login') }}" style="font-size: 12px;">Already have an account? Login</a>
             </div>
         </form>
+
+       
     </main>
 </section>
 
 <script>
     // Function to toggle the display of the parent dropdown and additional fields
-    function toggleParentDropdown() {
-        const roleSelect = document.getElementById('role');
-        const dobContainer = document.getElementById('dob-container');
-        const genderContainer = document.getElementById('gender-container');
-        const parentDropdownContainer = document.getElementById('parent-dropdown-container');
+    document.getElementById('role-change-btn').addEventListener('click', function () {
+        const roleSelect = document.getElementById('role-select');
+        const role = roleSelect.value;
 
-        if (roleSelect.value === 'Child') {
-            dobContainer.style.display = 'block';
-            genderContainer.style.display = 'block';
-            parentDropdownContainer.style.display = 'block';
+        // Toggle visibility based on the selected role
+        if (role === 'Child') {
+            document.getElementById('dob-container').style.display = 'block';
+            document.getElementById('gender-container').style.display = 'block';
+            document.getElementById('parent-dropdown-container').style.display = 'block';
         } else {
-            dobContainer.style.display = 'none';
-            genderContainer.style.display = 'none';
-            parentDropdownContainer.style.display = 'none';
+            document.getElementById('dob-container').style.display = 'none';
+            document.getElementById('gender-container').style.display = 'none';
+            document.getElementById('parent-dropdown-container').style.display = 'none';
         }
-    }
+    });
 </script>
 
 </body>
