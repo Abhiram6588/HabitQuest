@@ -45,7 +45,7 @@
             display: inline-block;
             padding: 10px 20px;
             margin-top: 20px;
-            background-color: #4CAF50;
+            background-color: #1B5E20;
             color: white;
             border: none;
             border-radius: 5px;
@@ -54,7 +54,7 @@
             text-align: center;
         }
         .button:hover {
-            background-color: #45a049;
+            background-color: #1B5E20;
         }
     </style>
 </head>
@@ -69,21 +69,31 @@
         <label for="question">Question</label>
         <input type="text" id="question" name="question" required>
 
-        <label>Options</label>
-        <div class="option-group">
-            <input type="text" name="option_1" placeholder="Option 1" required>
-            <input type="text" name="option_2" placeholder="Option 2" required>
-            <input type="text" name="option_3" placeholder="Option 3" required>
-            <input type="text" name="option_4" placeholder="Option 4" required>
-        </div>
+       <!-- Options with Labels -->
+       
+       <div class="option-group">
+           <label for="option_1">Option 1</label>
+           <input type="text" name="option_1" id="option_1" placeholder="Option 1" required title="Enter option 1">
 
-        <label for="correct_option">Correct Option (e.g., Option 1)</label>
-        <select id="correct_option" name="correct_option" required>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-            <option value="4">Option 4</option>
-        </select>
+           <label for="option_2">Option 2</label>
+           <input type="text" name="option_2" id="option_2" placeholder="Option 2" required title="Enter option 2">
+
+           <label for="option_3">Option 3</label>
+           <input type="text" name="option_3" id="option_3" placeholder="Option 3" required title="Enter option 3">
+
+           <label for="option_4">Option 4</label>
+           <input type="text" name="option_4" id="option_4" placeholder="Option 4" required title="Enter option 4">
+       </div>
+
+       <!-- Correct Option with Label -->
+       <label for="correct_option">Correct Option (e.g., Option 1)</label>
+       <select id="correct_option" name="correct_option" required title="Select the correct option">
+           <option value="1">Option 1</option>
+           <option value="2">Option 2</option>
+           <option value="3">Option 3</option>
+           <option value="4">Option 4</option>
+       </select>
+
 
         <button type="submit" class="button">Add Question</button>
     </form>
