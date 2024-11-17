@@ -20,7 +20,7 @@
 
         /* Navbar styling */
         .navbar {
-            background-color: #36a03e; /* Green background */
+            background-color: #1B5E20; /* Green background */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -173,7 +173,7 @@
         }
 
         button {
-            background-color: #4CAF50; /* Green button */
+            background-color: #1B5E20; /* Green button */
             color: white; /* White text */
             border: none; /* No border */
             border-radius: 5px; /* Rounded button */
@@ -184,7 +184,7 @@
         }
 
         button:hover {
-            background-color: #45a049; /* Darker green on hover */
+            background-color: #1B5E20; /* Darker green on hover */
         }
 
         .no-underline {
@@ -197,7 +197,7 @@
         }
 
         .dropbtn {
-            background-color: #4CAF50; /* Green */
+            background-color: #1B5E20; /* Green */
             color: white;
             padding: 10px;
             font-size: 16px;
@@ -230,7 +230,7 @@
         }
 
         .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
+            background-color: #1B5E20;
         }
 
         .enrolled-button {
@@ -250,7 +250,7 @@
             padding: 10px 15px;
             font-size: 1em;
             color: #fff;
-            background-color: #3e8e41; /* Bootstrap primary color */
+            background-color: #1B5E20; /* Bootstrap primary color */
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -259,7 +259,7 @@
         }
     
         button:hover, button:focus {
-            background-color: #3e8e41; /* Darker shade on hover */
+            background-color: #1B5E20; /* Darker shade on hover */
             transform: translateY(-2px); /* Subtle lift effect */
         }
     
@@ -382,7 +382,8 @@
                     {% elif course.is_enrolled %}
                         <button><a href="{{ url_for('course_content', content_id=course.content_id) }}" class="enrolled-button">Enrolled</a></button>
                     {% elif not course.is_enrolled %}
-                        <button type="submit" class="enroll-button" style="background-color: yellowgreen;">Enroll</button>
+                    <button type="submit" class="enroll-button" style="background-color: #1B5E20; color: white;">Enroll</button>
+
                     {% endif %}
                 </form>
         
