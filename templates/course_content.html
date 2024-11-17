@@ -43,7 +43,7 @@
             padding: 10px 15px;
             font-size: 1em;
             color: #fff;
-            background-color: #3e8e41; /* Bootstrap primary color */
+            background-color: #1B5E20; /* Bootstrap primary color */
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -52,7 +52,7 @@
         }
     
         button:hover, button:focus {
-            background-color: #3e8e41; /* Darker shade on hover */
+            background-color: #1B5E20; /* Darker shade on hover */
             transform: translateY(-2px); /* Subtle lift effect */
         }
     
@@ -96,7 +96,7 @@
         }
     
         select:hover {
-            border-color: #3e8e41; /* Change border color on hover */
+            border-color: #1B5E20; /* Change border color on hover */
         }
 
                 /* Button style for the assessment link */
@@ -105,7 +105,7 @@
             padding: 10px 20px;
             font-size: 1em;
             color: #fff;
-            background-color: #4CAF50;
+            background-color: #1B5E20;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
@@ -113,7 +113,7 @@
         }
 
         a:hover {
-            background-color: #45a049;
+            background-color: #1B5E20;
         }
            /* Button styles */
     button, select {
@@ -121,7 +121,7 @@
             padding: 10px 15px;
             font-size: 1em;
             color: #fff;
-            background-color: #3e8e41; /* Bootstrap primary color */
+            background-color: #1B5E20; /* Bootstrap primary color */
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -130,7 +130,7 @@
         }
     
         button:hover, button:focus {
-            background-color: #3e8e41; /* Darker shade on hover */
+            background-color: #1B5E20; /* Darker shade on hover */
             transform: translateY(-2px); /* Subtle lift effect */
         }
     
@@ -166,10 +166,10 @@
                 <iframe width="600" height="400" 
                         src="https://www.youtube.com/embed/{{ content['content_url'].split('v=')[1] }}" 
                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        title="Video tutorial on setting goals in HabitQuest"
+                        aria-label="Video tutorial on setting goals in HabitQuest"
                         allowfullscreen>
                 </iframe>
-                <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/pRrozi5X5cI?si=zsRRI_m08UzlGUQQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
-
             {% else %}
                 <!-- Fallback for non-YouTube videos -->
                 <video width="600" controls>
