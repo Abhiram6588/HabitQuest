@@ -5,70 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback and Contact Us</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 60%;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-            color: #555;
-        }
-        input[type="text"], input[type="email"], textarea, select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            text-align: center;
-        }
-        .button:hover {
-            background-color: #45a049;
-        }
-        .rating {
-            display: flex;
-            justify-content: space-between;
-            max-width: 200px;
-            margin-top: 10px;
-        }
-        .rating input {
-            display: none;
-        }
-        .rating label {
-            font-size: 25px;
-            color: #ccc;
-            cursor: pointer;
-        }
-        .rating input:checked ~ label {
-            color: #FFD700;
-        }
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Keep background color */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly reduce shadow opacity */
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #333333; /* Darker text for heading */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333333; /* Darker text color */
+}
+
+input[type="text"], input[type="email"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #333; /* Ensure input text has good contrast */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #1B5E20; /* Ensure background has enough contrast */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #1B5E20; /* Keep the hover state the same */
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 30px; /* Increase font size of stars */
+    color: #666666; /* Darker unselected color for better contrast */
+    cursor: pointer;
+}
+
+.rating input:checked ~ label {
+    color: #FFD700; /* Gold for selected star */
+}
+
+/* Focus state for better accessibility */
+.rating input[type="radio"]:focus + label {
+    outline: 2px solid #FFD700; /* High contrast outline when focused */
+}
+
+/* Label color for hover effect */
+.rating input[type="radio"]:hover + label {
+    color: #FFB700; /* Slightly darker yellow when hovering */
+}
+
     </style>
 </head>
 <body>
