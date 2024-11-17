@@ -11,7 +11,13 @@
       padding: 0;
       font-family: 'Arial', sans-serif;
       background-color: #eae9d8; /* Updated background color */
-      overflow: hidden;
+      
+    }
+
+    /* Container and page sections */
+    header {
+      text-align: center;
+      margin-bottom: 50px;
     }
 
     .container {
@@ -43,8 +49,8 @@
       text-decoration: none;
       padding: 15px 30px;
       border-radius: 30px;
-      background-color: #4CAF50; /* Updated button color */
-      color: white;
+      background-color: #1B5E20; /* Even darker green for better contrast */
+      color: white; /* White text for high contrast */
       font-size: 1.1em;
       font-weight: bold;
       transition: background-color 0.3s ease;
@@ -55,7 +61,7 @@
     }
 
     .button:hover {
-      background-color: #388E3C; /* Darker green on hover */
+      background-color: #174f17; /* Slightly darker green on hover */
     }
 
     /* Keyframe animations */
@@ -124,17 +130,26 @@
       }
     }
 
-    
   </style>
 </head>
 <body>
-  <div class="container">
+  <!-- Header Section -->
+  <header>
     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/eb1830b5454e0074642c040444e16c8b4efe38cc3a5289983eba32e185b3736b?placeholderIfAbsent=true&apiKey=aa3f52c3f2244f6ca05b5f4f61461c10" alt="HabitQuest Logo" class="logo-image" style="width: 150px; margin-bottom: 20px;"> <!-- Added logo image -->
     <h1>Welcome to HabitQuest</h1>
+  </header>
+
+  <!-- Main Section -->
+  <main class="container">
     <p>Transform your habits, one quest at a time. Are you ready to start your journey?</p>
     <a href="{{url_for('signup')}}" class="button">New User? Register Here</a>
     <a href="{{url_for('login')}}" class="button">Existing User? Login Here</a> <!-- Added login button -->
-  </div>
+  </main>
+
+  <!-- Footer Section (Optional, can be added later) -->
+  <footer>
+    <!-- You can add footer content here if necessary -->
+  </footer>
 
   <!-- Background Animations -->
   <div class="background-circle circle-1"></div>
