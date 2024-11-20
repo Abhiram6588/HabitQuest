@@ -42,6 +42,13 @@
             text-decoration: none;
             font-weight: bold;
         }
+        .nav-links a, .logout {
+    color: #e8f5e9; /* Light green text with improved contrast on dark green */
+}
+button {
+    background-color: #1B5E20; /* Dark green */
+    color: #e8f5e9; /* Light green text */
+}
 
         .logout {
             color: white;
@@ -368,7 +375,7 @@
         <h1>Select a Habit-Building Course</h1>
 
         <div class="search-container">
-            <input type="text" id="searchInput" onkeyup="searchCourses()" placeholder="Search for courses...">
+            <input type="text" id="searchInput" onkeyup="searchCourses()" placeholder="Search for courses..." aria-label="Search Courses">
         </div>
         
         <div class="container">
